@@ -7,12 +7,13 @@
       [title]="weather.weather[0].description"
     />
   </div>
-  <div class="category">{{ weather.weather[0].description | titlecase }}</div>
+  <div class="category">Temps {{ weather.weather[0].description | titlecase }}</div>
   <div class="heading">
     {{ weather.name | titlecase }} <span>{{ weather.main.temp }}°C</span>
   </div>
-  <div class="description"><span>Min.</span> {{ weather.main.temp_min }}°C</div>
-  <div class="description"><span>Max.</span> {{ weather.main.temp_max }}°C</div>
+  <!-- <div class="description"><span>Minimum:</span> {{ weather.main.temp_min }}°C</div> -->
+  <div class="description"><span>Maximum:</span> {{ weather.main.temp_max }}°C</div>
+  <div class="description"><span>Humidité:</span> {{ weather.main.humidity }}%</div>
   <div class="description">
     <span>Vent:</span> {{ weather.wind.speed }}Km/H {{ weather.wind.deg }}°
   </div>
