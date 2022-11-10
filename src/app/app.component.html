@@ -1,0 +1,33 @@
+<div class="content">
+  <div class="app">
+    <header class="header">
+      <h1>Météo App <span>by Eric Maës</span></h1>
+    </header>
+    <hr />
+
+    <!-- Formulaire pour rentrer le nom de la ville -->
+
+    <form class="form" (ngSubmit)="viewWeather()">
+      <input
+        type="text"
+        name="city"
+        class="form__input"
+        id="city"
+        [(ngModel)]="city"
+      />
+      <!-- <label for="ville">Ville:</label>
+      <input name="ville" id="ville" type="text" [(ngModel)]="ville"> -->
+      <button class="form__submit" type="submit">Voir la météo</button>
+      <button
+        class="form__submit-local"
+        type="button"
+        (click)="viewLocalWeather()"
+      >
+        Voir la météo locale 📍
+      </button>
+    </form>
+
+    <!-- Affichage de la météo -->
+    <app-meteo-card *ngIf="weathers" [weather]="weathers"></app-meteo-card>
+  </div>
+</div>

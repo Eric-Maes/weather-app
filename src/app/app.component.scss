@@ -1,0 +1,79 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .app {
+    background: #E8F9FD;
+    height: 500px;
+    padding: 10px;
+    border-radius: 10px;
+
+  }
+}
+
+.header {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+
+  h1 {
+    font-weight: lighter;
+    color: #005792;
+
+    span {
+        font-weight: bold;
+        font-size: 14px;
+    }
+  }
+}
+
+hr {
+    margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+
+  .form__input {
+    min-height: 50px;
+    max-width: 150px;
+    padding: 0 1rem;
+    font-size: 15px;
+    border: 1px solid #2155CD;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+  }
+
+  .form__submit {
+    min-height: 50px;
+    padding: 0.5em 1em;
+    border: none;
+    // border-radius: 0 6px 6px 0;
+    background-color: #0AA1DD;
+    color: #E8F9FD;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .form__submit-local {
+    min-height: 50px;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #005792;
+    color: #E8F9FD;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .form__submit:hover,
+  .form__submit-local:hover {
+    background-color: #5584AC;
+  }
+  .form__input:focus,
+  .form__input:focus-visible {
+    border-color: #2155CD;
+    outline: none;
+  }
+}

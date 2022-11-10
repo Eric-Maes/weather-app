@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card__image">
+    <img
+      [src]="
+        'https://openweathermap.org/img/wn/' + weather.weather[0].icon + '@2x.png'
+      "
+      [title]="weather.weather[0].description"
+    />
+  </div>
+  <div class="category">{{ weather.weather[0].description | titlecase }}</div>
+  <div class="heading">
+    {{ weather.name | titlecase }} <span>{{ weather.main.temp }}°C</span>
+  </div>
+  <div class="description"><span>Min.</span> {{ weather.main.temp_min }}°C</div>
+  <div class="description"><span>Max.</span> {{ weather.main.temp_max }}°C</div>
+  <div class="description">
+    <span>Vent:</span> {{ weather.wind.speed }}Km/H {{ weather.wind.deg }}°
+  </div>
+</div>
